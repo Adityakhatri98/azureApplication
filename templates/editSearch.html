@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/multipleUpload.css" rel="stylesheet">
+
+{% include '/menu.html' %}
+</head>
+<body>
+<center>
+<div class="container">
+
+</div>
+<div class="container">
+<form action="/edit" method="post">
+
+<br>
+			<input type="text" id="name" placeholder="Enter the Name" name="name">
+
+<br><br/>
+
+	<input type="submit" value="Submit"  />
+</form>
+</div>
+    <br>
+    {%if msg%}
+        {{ msg }}
+    {%endif%}
+    {%if error%}
+			{{error}}
+    {%endif%}
+
+</center>
+</body>
+</html>

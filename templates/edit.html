@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/multipleUpload.css" rel="stylesheet">
+
+{% include '/menu.html' %}
+</head>
+<body>
+<center>
+<div class="container">
+
+</div>
+<div class="container">
+<form action="/editDetails" method="post">
+
+<br>
+	<table>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <input type="text" id="name" name="name"  value={{ data['name'] }} >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Salary
+            </td>
+            <td>
+                <input type="text" id="name" name="salary"value={{ data['salary'] }} >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Room
+            </td>
+            <td>
+                <input type="text" id="name" name="room" value={{ data['room'] }} >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                TelNumber
+            </td>
+            <td>
+                <input type="text" id="name" name="telnum" value={{data['telnum']}} >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Picture
+            </td>
+            <td>
+                <input type="text" id="name" name="picture" value={{data['picture']}} >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Keywords
+            </td>
+            <td>
+                <input type="text" id="name" name="Keywords" value={{data['Keywords']}} >
+            </td>
+        </tr>
+    </table>
+
+
+
+
+<br><br/>
+
+	<input type="submit" value="Submit"  />
+</form>
+</div>
+    <br>
+    {%if msg%}
+        <img src={{ path }} alt="Preview" width="500" height="600">
+    {%endif%}
+    {%if error%}
+			{{error}}
+    {%endif%}
+
+</center>
+</body>
+</html>

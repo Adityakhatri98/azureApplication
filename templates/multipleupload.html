@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/multipleUpload.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+{% include '/menu.html' %}
+</head>
+<body>
+<div class="container">
+	<h1>Multiple File Upload Viewer</h1>
+</div>
+<div class="container">
+<form action="/uploadFile" method="post" enctype="multipart/form-data">
+	<div>
+		<label for="upload">
+			<input type="file" id="upload" name="fileUpload" multiple>
+		Upload Files
+		</label>
+	</div>
+	<div class="files">
+		<h2>Files Selected</h2>
+		<ul></ul>
+	</div>
+	<input type="submit" value="Submit" name="submit" id="submit" />
+</form>
+</div>
+{% if msg %}
+    {{msg  }}
+{% endif %}
+</body>
+<script src="../static/js/multipleupload.js"></script>
+</html>
